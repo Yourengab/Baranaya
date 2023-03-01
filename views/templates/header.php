@@ -15,7 +15,7 @@ if (!isset($_SESSION['login'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>School Payment</title>
-    <link rel="stylesheet" href="http://localhost/projectuk/styles/style.php" />
+    <link rel="stylesheet" href="../../styles/style.php" />
   </head>
   <body onscroll="scrollWindow()">
     <header>
@@ -28,7 +28,7 @@ if (!isset($_SESSION['login'])) {
         <span></span>
         <div class="links">
           <ul>
-            <li><a href="">Dashboard</a></li>
+            <li><a href="../../dashboard/dashboard.php">Dashboard</a></li>
             <?php if ($_SESSION['level'] == 'admin') { ?>
             <li><a href="http://localhost/projectuk/siswa/viewsiswa.php">Daftar Siswa</a></li>
             <li><a href="http://localhost/projectuk/kelas/viewkelas.php">Daftar Kelas</a></li>
@@ -61,4 +61,4 @@ if (!isset($_SESSION['login'])) {
         </div>
       </nav>
     </header>
-    <script src="http://localhost/projectuk/script/script.php"></script>
+    <script src="../../script/script.php"></script>

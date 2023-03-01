@@ -148,6 +148,119 @@ footer p {
   color: var(--text-dimmed);
 }
 
+/* Dashboard */
+.dash-container{
+  width: 100%;
+  /* background-color: #6b26fd; */
+}
+
+.dash-container .dash-head{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  /* width: fit-content; */
+  /* gap: 10px; */
+  padding: 30px 50px 40px;
+}
+
+.dash-container .dash-head .head-left{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dash-container .dash-head .head-left p{
+  color: var(--text-dimmed);
+  font-weight: 600;
+}
+
+.dash-container .dash-head .head-left .data-box{
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.dash-container .dash-head .head-left .data-box .data{
+  background-color: var(--second);
+  border-radius: 16px;
+  padding: 20px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.dash-container .dash-head .head-left .data-box .data img{
+  width: 50px;
+}
+
+.dash-container .dash-head .head-left .data-box .data .line{
+  width: 2px;
+  height: 100%;
+  background-color: var(--main);
+}
+
+.dash-container .dash-head .head-left .data-box .data .count{
+  display: flex;
+  flex-direction: column;
+}
+
+.dash-container .dash-head .head-left .data-box .data .count span{
+  color: #fff;
+  font-size: 1rem;
+}
+.dash-container .dash-head .head-left .data-box .data .count span:first-child{
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.dash-container .dash-head .head-right{
+  display: flex;
+  flex-direction: column;
+}
+
+.dash-container .dash-head .head-right p{
+  font-weight: 600;
+}
+
+.dash-container .dash-head .head-right .kalender{
+  width: 100%;
+  height: 250px;
+  border-radius: 20px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.20);
+}
+
+.dash-container .dash-motivation{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: #1c1c1d;
+  border-radius: 50px 50px 0px 0px;
+  padding: 20px 50px;
+}
+
+.dash-container .dash-motivation > p{
+  color: #fff;
+  font-size: 20px;
+}
+
+.dash-container .dash-motivation .motiv-box{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.dash-container .dash-motivation .motiv-box .motiv span{
+  background-color: var(--second);
+  border-radius: 50%;
+  padding: 5px 10px;
+  color: #fff;
+}
+
+.dash-container .dash-motivation .motiv-box .motiv p{
+  color: var(--text-dimmed);
+}
+
 /* Table */
 .container {
   padding: 0 50px;
