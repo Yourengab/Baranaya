@@ -1,4 +1,4 @@
-<?php header("Content-type: text/css"); ?>
+<?php header("Content-Type: text/css"); ?>
 
 body {
     padding: 50px;
