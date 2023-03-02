@@ -4,11 +4,13 @@ include 'functionhistori.php';
 
 if (isset($_GET['keyword'])) {
     $keyword = $_GET['keyword'];
-    $dataRiwayat = query("SELECT * FROM tb_spp INNER JOIN tb_siswa using(nis) INNER JOIN tb_kelas USING(idkelas) WHERE totalbayar > 0 AND nis = '$keyword' OR nama LIKE '%$keyword%' AND totalbayar IS NOT NULL ORDER BY tglbayar DESC");
+    $dataRiwayat = query("SELECT * FROM tb_spp INNER JOIN tb_siswa using(nis) INNER JOIN tb_kelas USING(idkelas) WHERE totalbayar > 0 AND nis = '$keyword' OR nama LIKE '%$keyword%' AND totalbayar > 0 ORDER BY tglbayar DESC");
 
-    $totalBayar = query("SELECT SUM(totalbayar) FROM tb_spp INNER JOIN tb_siswa using(nis) INNER JOIN tb_kelas USING(idkelas) WHERE totalbayar > 0 AND nis = '$keyword' OR nama LIKE '%$keyword%' AND totalbayar IS NOT NULL ORDER BY tglbayar DESC")[0];
+    $totalBayar = query("SELECT SUM(totalbayar) FROM tb_spp INNER JOIN tb_siswa using(nis) INNER JOIN tb_kelas USING(idkelas) WHERE totalbayar > 0 AND nis = '$keyword' OR nama LIKE '%$keyword%' AND totalbayar > 0 ORDER BY tglbayar DESC")[0];
 } else {
     $dataRiwayat = query("SELECT * FROM tb_spp INNER JOIN tb_siswa using(nis) INNER JOIN tb_kelas USING(idkelas) WHERE totalbayar > 0 ORDER BY tglbayar DESC");
+    $totalBayar = query("SELECT SUM(totalbayar) FROM tb_spp INNER JOIN tb_siswa using(nis) INNER JOIN tb_kelas USING(idkelas) WHERE totalbayar > 0 ORDER BY tglbayar DESC")[0];
+    
 }
 ?>
 
@@ -27,6 +29,7 @@ if (isset($_GET['keyword'])) {
     <div class="container">
         <table border="1" cellpadding="5">
             <tr>
+                <th>No</th>
                 <th>Petugas</th>
                 <th>NIS</th>
                 <th>Nama</th>
@@ -35,8 +38,12 @@ if (isset($_GET['keyword'])) {
                 <th>Tanggal Bayar</th>
                 <th>Total Bayar</th>
             </tr>
+            <?php $i = 1; ?>
             <?php foreach ($dataRiwayat as $riwayat): ?>
                 <tr>
+                    <td>
+                    <?= $i++; ?>
+                    </td>
                     <td>
                         <?= $riwayat['petugas']; ?>
                     </td>
@@ -56,7 +63,7 @@ if (isset($_GET['keyword'])) {
                         <?= $riwayat['tglbayar']; ?>
                     </td>
                     <td>
-                        <?= $riwayat['totalbayar']; ?>
+                        Rp<?= $riwayat['totalbayar']; ?>
                     </td>
                 </tr>
                 <?php endforeach; ?>

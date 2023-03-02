@@ -43,6 +43,7 @@ header .menu.scroll {
   background-color: var(--second);
   padding: 10px 15px;
   border-radius: 10px;
+  transform: scale(0.75);
  
 }
 
@@ -197,7 +198,7 @@ footer p {
 .dash-container .dash-head .head-left .data-box .data .line{
   width: 2px;
   height: 100%;
-  background-color: var(--main);
+  background-color: white;
 }
 
 .dash-container .dash-head .head-left .data-box .data .count{
@@ -225,9 +226,69 @@ footer p {
 
 .dash-container .dash-head .head-right .kalender{
   width: 100%;
-  height: 250px;
+  height: 350px;
+  padding-right: 45px;
   border-radius: 20px;
   box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.20);
+}
+
+.dash-container .dash-head .head-right .kalender header {
+  display: flex;
+  align-items: center;
+  padding: 25px 30px 10px;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+
+.dash-container .dash-head .head-right .kalender header .navigasi-kalender img {
+  text-align: center;
+  width: 20px;
+  cursor: pointer;
+}
+
+.dash-container .dash-head .head-right .kalender header .navigasi-kalender img:last-child {
+  margin-left: 25px;
+}
+
+.dash-container .dash-head .head-right .kalender header .current {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.dash-container .dash-head .head-right .kalender ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.dash-container .dash-head .head-right .kalender .kalender-main ul li {
+  width: calc(100% / 7);
+  text-align: center;
+  position: relative;
+}
+
+.dash-container .dash-head .head-right .kalender .kalender-main .minggu {
+  font-weight: 500;
+}
+
+.dash-container .dash-head .head-right .kalender .kalender-main .hari li {
+  margin-top: 12px;
+}
+
+
+.dash-container .dash-head .head-right .kalender .kalender-main .hari li:hover {
+cursor: pointer;
+  opacity: 0.8;
+}
+
+.dash-container .dash-head .head-right .kalender .kalender-main .hari li.inactive {
+  opacity: 0.5;
+}
+
+.dash-container .dash-head .head-right .kalender .kalender-main .hari li.active {
+  color: white;
+  background-color: var(--second);
+  border-radius: 20px;
 }
 
 .dash-container .dash-motivation{
@@ -237,7 +298,7 @@ footer p {
   gap: 16px;
   background-color: #1c1c1d;
   border-radius: 50px 50px 0px 0px;
-  padding: 20px 50px;
+  padding: 70px 50px 20px 50px;
 }
 
 .dash-container .dash-motivation > p{
@@ -248,6 +309,7 @@ footer p {
 .dash-container .dash-motivation .motiv-box{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
 }
 
 .dash-container .dash-motivation .motiv-box .motiv span{
@@ -260,6 +322,8 @@ footer p {
 .dash-container .dash-motivation .motiv-box .motiv p{
   color: var(--text-dimmed);
 }
+
+
 
 /* Table */
 .container {

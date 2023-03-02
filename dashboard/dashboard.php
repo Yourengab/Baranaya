@@ -1,52 +1,104 @@
-<?php 
+<?php
 include('../views/templates/header.php');
 include('functiondashboard.php');
+
+$dataSiswa = query("SELECT * FROM tb_siswa");
+$user = $_SESSION['namaPetugas'];
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="../styles/style.php">
-</head>
 <body>
     <div class="dash-container">
         <div class="dash-head">
             <div class="head-left">
-                <h1>Hallo👋, Suryadana Selamat Datang,<br> Semangat Kerjanya!🔥😍</h1>
+                <h1>Hallo <?= $user; ?>👋,  Selamat Datang,<br> Di Dashboard!🔥😍</h1>
                 <p>Total data yang ada di Dashboard</p>
                 <div class="data-box">
                     <div class="data">
-                        <img src="../asset/trash.svg" alt="">
+                        <img src="../asset/siswa.svg" alt="">
                         <div class="line"></div>
                         <div class="count">
-                            <span>120</span>
+                            <?php $totalSiswa = query("SELECT COUNT(*) FROM tb_siswa")[0] ?>
+                            <span><?= $totalSiswa['COUNT(*)']; ?></span>
                             <span>Data Siswa</span>
                         </div>
                     </div>
                     <div class="data">
-                        <img src="../asset/trash.svg" alt="">
+                        <img src="../asset/petugas.svg" alt="">
                         <div class="line"></div>
                         <div class="count">
-                            <span>120</span>
-                            <span>Data Siswa</span>
+                        <?php $totalPetugas = query("SELECT COUNT(*) FROM tb_petugas")[0] ?>
+                            <span><?= $totalPetugas['COUNT(*)']; ?></span>
+                            <span>Data Petugas</span>
                         </div>
                     </div>
                     <div class="data">
-                        <img src="../asset/trash.svg" alt="">
+                        <img src="../asset/histori.svg" alt="">
                         <div class="line"></div>
                         <div class="count">
-                            <span>120</span>
-                            <span>Data Siswa</span>
+                            <?php $totalHistori = query("SELECT COUNT(*) FROM tb_spp WHERE totalbayar > 0")[0] ?>
+                            <span><?= $totalHistori['COUNT(*)']; ?></span>
+                            <span>Histori Pembayaran</span>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="head-right">
                 <p>Kalender</p>
-                <div class="kalender"></div>
+                <div class="kalender">
+                    <header>
+                        <div class="current">September 2023</div>
+                        <div class="navigasi-kalender">
+                            <img src="../asset/kiri.svg">
+                            <img src="../asset/kanan.svg">
+                        </div>
+                    </header>
+                    <div class="kalender-main">
+                        <ul class="minggu">
+                            <li>Min</li>
+                            <li>Sen</li>
+                            <li>Sel</li>
+                            <li>Rab</li>
+                            <li>Kam</li>
+                            <li>Jum</li>
+                            <li>Sabt</li>
+                        </ul>
+                        <ul class="hari">
+                            <li>28</li>
+                            <li>29</li>
+                            <li>30</li>
+                            <li>31</li>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                            <li>6</li>
+                            <li>7</li>
+                            <li>8</li>
+                            <li>9</li>
+                            <li>10</li>
+                            <li>11</li>
+                            <li>12</li>
+                            <li>13</li>
+                            <li>14</li>
+                            <li>15</li>
+                            <li>16</li>
+                            <li>17</li>
+                            <li>18</li>
+                            <li class="active">19</li>
+                            <li>20</li>
+                            <li>21</li>
+                            <li>22</li>
+                            <li>23</li>
+                            <li>24</li>
+                            <li >25</li>
+                            <li>26</li>
+                            <li>27</li>
+                            <li>28</li>
+                            <li>29</li>
+                            <li class="inactive">30</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
 

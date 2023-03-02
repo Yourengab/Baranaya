@@ -39,13 +39,13 @@ if ($_SESSION['level'] == "petugas" || $_SESSION['level'] == "admin") {
     <div class="containerHeading">
       <h1>Riwayat Pembayaran </h1>
       <p>Daftar riwayat pembayaran spp siswa</p>
-      <?php if($_SESSION['level'] == "petugas" || $_SESSION['level'] == "admin ") { ?>
-      <?php if ($_GET['keyword']  == "") { ?>
+      <?php if($_SESSION['level'] == "siswa") { ?>
+      <?php } else { ?>
+        <?php if ($_GET['keyword']  == "") { ?>
         <a href="laporan.php">Cetak Histori</a>
         <?php } else { ?>
           <a href="laporan.php?keyword=<?= $keyword ?>">Cetak Histori</a>
       <?php } ?>
-      <?php } else { ?>
       <?php } ?>
     </div>
     <div class="tableContainer histori">

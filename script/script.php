@@ -25,4 +25,18 @@ function scrollWindow() {
   }
 }
 
+// kalender
+let bulan = document.querySelector(".kalender header .current");
+let date = new Date();
+let currYear = date.getFullYear();
+let currMonth = date.getMonth();
+console.log(bulan);
+
+const months = ['Januari','Februari','March','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'];
+const renderCalender = () => {
+  let lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate();
+  month.innerText = `${months[currMonth]} ${currYear}`;
+}
+renderCalender();
+console.log(date,currMonth,currYear)
 
