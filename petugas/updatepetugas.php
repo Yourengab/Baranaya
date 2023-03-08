@@ -6,7 +6,7 @@ $nip = $_GET['nip'];
 $dataPetugas = query("SELECT * FROM tb_petugas WHERE nip=$nip");
 
 if (isset($_POST['updatePetugas'])) {
-    updatePetugas($_POST,$nip);
+    updatePetugas($_POST, $nip);
 }
 ?>
 
@@ -16,7 +16,7 @@ if (isset($_POST['updatePetugas'])) {
             <form action="" method="post">
                 <h2>Update Petugas</h2>
                 <a href="viewpetugas.php" style="color: white;">Kembali</a>
-                <?php foreach(  $dataPetugas as $petugas ) : ?>
+                <?php foreach($dataPetugas as $petugas) : ?>
                     <div class="long nama">
                         <label for="nama">Nama</label>
                     <input type="text" id="nama" name="nama" autocomplete="off" required value="<?= $petugas['nama']?>"/>
@@ -32,12 +32,12 @@ if (isset($_POST['updatePetugas'])) {
                     </div>
                     <?php endforeach; ?>
                 </div>
-                <button type="submit" name="updatePetugas">Tambah</button>
+                <button type="submit" name="updatePetugas">Simpan</button>
             </form>
         </div>
     </div>
 
     <?php
     include '../views/templates/footer.php';
-    ?>
+?>
 </body>

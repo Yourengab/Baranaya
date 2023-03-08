@@ -8,8 +8,7 @@ $angkatan = $_POST['angkatan'];
 $dataSiswa = query("SELECT * FROM tb_siswa WHERE idkelas = '$kelas' ORDER BY nama ASC");
 $dataRiwayat = query("SELECT * FROM tb_spp INNER JOIN tb_siswa USING(nis) WHERE idkelas = '$kelas' AND angkatan = '$angkatan' ORDER BY nama ASC");
 $dataBulan = query("SELECT * FROM tb_spp WHERE angkatan = '$angkatan' GROUP BY bulan ORDER BY id");
-
-
+$totalBayar = query("SELECT SUM(totalbayar) FROM tb_spp INNER JOIN tb_siswa using(nis) INNER JOIN tb_kelas USING(idkelas) WHERE totalbayar > 0 AND idkelas = '$kelas' AND angkatan = '$angkatan' ORDER BY tglbayar DESC")[0];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,7 +42,7 @@ $dataBulan = query("SELECT * FROM tb_spp WHERE angkatan = '$angkatan' GROUP BY b
             </tr>
             <?php endforeach; ?>
         </table>
-        <h2>Total Bayar : Rp</h2>
+        <h2>Total Bayar : Rp<?= number_format($totalBayar['SUM(totalbayar)'], 0, ',', '.'); ?></h2>
         <div class="ttd">
             <p>Denpasar, <?= date('d-m-Y'); ?></p>
             <p><?= $_SESSION['namaPetugas']; ?></p>

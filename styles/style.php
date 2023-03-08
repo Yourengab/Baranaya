@@ -158,6 +158,7 @@ footer p {
   /* width: fit-content; */
   /* gap: 10px; */
   padding: 30px 50px 40px;
+  justify-content: space-between;
 }
 
 .dash-container .dash-head .head-left{
@@ -215,6 +216,8 @@ footer p {
 .dash-container .dash-head .head-right{
   display: flex;
   flex-direction: column;
+  margin-left: 150px;
+
 }
 
 .dash-container .dash-head .head-right p{
@@ -222,70 +225,28 @@ footer p {
 }
 
 .dash-container .dash-head .head-right .kalender{
-  width: 100%;
+  width: 400px;
   height: 350px;
-  padding-right: 45px;
   border-radius: 20px;
   box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.20);
 }
 
-.dash-container .dash-head .head-right .kalender header {
-  display: flex;
-  align-items: center;
-  padding: 25px 30px 10px;
-  justify-content: space-between;
-  margin-left: 20px;
+.dash-container .dash-head .head-right .kalender .kalender-main {
+  padding: 0 40px;
 }
 
-.dash-container .dash-head .head-right .kalender header .navigasi-kalender img {
-  text-align: center;
-  width: 20px;
-  cursor: pointer;
+.dash-container .dash-head .head-right .kalender .kalender-main h1 {
+color: var(--main);
 }
 
-.dash-container .dash-head .head-right .kalender header .navigasi-kalender img:last-child {
-  margin-left: 25px;
+.dash-container .dash-head .head-right .kalender .kalender-main p {
+  color: var(--border);
 }
-
-.dash-container .dash-head .head-right .kalender header .current {
-  font-size: 22px;
-  font-weight: 600;
-}
-
-.dash-container .dash-head .head-right .kalender ul {
-  display: flex;
-  list-style: none;
-  flex-wrap: wrap;
-}
-
-.dash-container .dash-head .head-right .kalender .kalender-main ul li {
-  width: calc(100% / 7);
-  text-align: center;
-  position: relative;
-}
-
-.dash-container .dash-head .head-right .kalender .kalender-main .minggu {
-  font-weight: 500;
-}
-
-.dash-container .dash-head .head-right .kalender .kalender-main .hari li {
-  margin-top: 12px;
-}
-
-
-.dash-container .dash-head .head-right .kalender .kalender-main .hari li:hover {
-cursor: pointer;
-  opacity: 0.8;
-}
-
-.dash-container .dash-head .head-right .kalender .kalender-main .hari li.inactive {
-  opacity: 0.5;
-}
-
-.dash-container .dash-head .head-right .kalender .kalender-main .hari li.active {
-  color: white;
-  background-color: var(--second);
-  border-radius: 20px;
+.dash-container .dash-head .head-right .kalender img {
+ width: 100%;
+ height: 200px;
+ border-top-left-radius: 20px;
+ border-top-right-radius: 20px;
 }
 
 .dash-container .dash-motivation{

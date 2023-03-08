@@ -24,7 +24,7 @@ if(isset($_POST['cariKelas'])) {
         <form action="" method="post">
           <div class="search">
             <label for="keyword">Cari kelas</label>
-            <input type="text" id="keyword" name="keyword" placeholder="I Nyoman Suryadana" />
+            <input type="text" id="keyword" name="keyword" placeholder="XI" />
           </div>
           <button type="submit" name="cariKelas">Cari</button>
         </form>

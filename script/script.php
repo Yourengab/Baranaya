@@ -26,7 +26,7 @@ function scrollWindow() {
 const months = [
   "Januari",
   "Februari",
-  "March",
+  "Maret",
   "April",
   "Mei",
   "Juni",
@@ -37,14 +37,27 @@ const months = [
   "November",
   "Desember",
 ];
+const days = [
+  "Minggu",
+  "Senin",
+  "Selasa",
+  "Rabu",
+  "Kamis",
+  "Jumat",
+  "Sabtu"
+];
 
-const renderCalendar = (bulan) => {
-  const date = new Date();
-  const currYear = date.getFullYear();
-  const currMonth = date.getMonth();
-  const lastDateOfMonth = new Date(currYear, currMonth + 1, 0).getDate();
-  return bulan.innerText = `${months[currMonth]} ${currYear}`;
-};
+let date = new Date(),
+hari = date.getDay();
+tanggal = date.getDate();
+bulan = date.getMonth();
+tahun = date.getFullYear();
+console.log(bulan)
+const showDate = document.querySelector(".kalender-main h1");
+const showMonth = document.querySelector(".kalender-main p");
 
-const bulan = document.querySelector(".kalender header .current");
-renderCalendar(bulan);
+function renderKalender() {
+  showDate.innerText = `${days[hari]}`
+  showMonth.innerText = `${tanggal} ${months[bulan]} ${tahun}`
+}
+renderKalender();

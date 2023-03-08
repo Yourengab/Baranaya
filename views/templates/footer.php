@@ -5,7 +5,7 @@
   <footer>
       <div class="footerText">
         <h2>Baranaya</h2>
-        <p>SMP Teknologi pertama di bali dengan kualitas pendidikan internasional.</p>
+        <p>SMK Teknologi pertama di bali dengan kualitas pendidikan internasional.</p>
       </div>
       <div class="footerParagraph">
         <h2>Email</h2>

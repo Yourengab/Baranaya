@@ -39,7 +39,6 @@ function tambahPetugas($data)
             alert('Gagal menambah data petugas');
             window.location.href = 'deletepetugas.php';
             </script>";
-
     }
 }
 
@@ -64,7 +63,8 @@ function deletePetugas($nip)
         header('Location: viewpetugas.php');
     }
 }
-function updatePetugas($data,$nip) {
+function updatePetugas($data, $nip)
+{
     global $conn;
 
     $nama = $data['nama'];
@@ -77,7 +77,7 @@ function updatePetugas($data,$nip) {
     notelp='$telp'
      WHERE nip=$nip";
 
-    mysqli_query($conn,$query);
+    mysqli_query($conn, $query);
     if (mysqli_affected_rows($conn) > 0) {
         echo "
             <script>
@@ -88,9 +88,7 @@ function updatePetugas($data,$nip) {
         echo "
             <script>
             alert('Gagal mengedit data petugas');
-            window.location.href = 'deletepetugas.php';
+            window.location.href = 'viewpetugas.php';
             </script>";
-
     }
 }
- ?>

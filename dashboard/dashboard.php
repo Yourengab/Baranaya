@@ -42,67 +42,20 @@ $user = $_SESSION['namaPetugas'];
                 </div>
             </div>
             <div class="head-right">
-                <p>Kalender</p>
+                <h1>Kalender</h1>
                 <div class="kalender">
-                    <header>
-                        <div class="current">September 2023</div>
-                        <div class="navigasi-kalender">
-                            <img src="../asset/kiri.svg">
-                            <img src="../asset/kanan.svg">
-                        </div>
-                    </header>
+                    <div class="banner">
+                        <img src="../asset/kalender.jpg">
+                    </div>
                     <div class="kalender-main">
-                        <ul class="minggu">
-                            <li>Min</li>
-                            <li>Sen</li>
-                            <li>Sel</li>
-                            <li>Rab</li>
-                            <li>Kam</li>
-                            <li>Jum</li>
-                            <li>Sabt</li>
-                        </ul>
-                        <ul class="hari">
-                            <li>28</li>
-                            <li>29</li>
-                            <li>30</li>
-                            <li>31</li>
-                            <li>1</li>
-                            <li>2</li>
-                            <li>3</li>
-                            <li>4</li>
-                            <li>5</li>
-                            <li>6</li>
-                            <li>7</li>
-                            <li>8</li>
-                            <li>9</li>
-                            <li>10</li>
-                            <li>11</li>
-                            <li>12</li>
-                            <li>13</li>
-                            <li>14</li>
-                            <li>15</li>
-                            <li>16</li>
-                            <li>17</li>
-                            <li>18</li>
-                            <li class="active">19</li>
-                            <li>20</li>
-                            <li>21</li>
-                            <li>22</li>
-                            <li>23</li>
-                            <li>24</li>
-                            <li >25</li>
-                            <li>26</li>
-                            <li>27</li>
-                            <li>28</li>
-                            <li>29</li>
-                            <li class="inactive">30</li>
-                        </ul>
+                        <h1>Senin</h1>
+                        <p>20 Maret 2023</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="dash-motivation">
+        <!-- <div class="dash-motivation">
             <p>Kata - kata untuk hari ini</p>
             <div class="motiv-box">
                 <div class="motiv">
@@ -119,6 +72,9 @@ $user = $_SESSION['namaPetugas'];
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
+<?php
+include('../views/templates/footer.php');
+?>
 </body>
 </html>

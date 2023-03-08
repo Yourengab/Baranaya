@@ -16,9 +16,9 @@ function tambahSpp($nis, $kelas)
 {
     global $conn;
 
-    $sppVII = query("SELECT nominalspp from tb_kelas WHERE kelas='VII'")[0]['nominalspp'];
-    $sppVIII = query("SELECT nominalspp from tb_kelas WHERE kelas='VIII'")[0]['nominalspp'];
-    $sppIX = query("SELECT nominalspp from tb_kelas WHERE kelas='IX'")[0]['nominalspp'];
+    $sppVII = query("SELECT nominalspp from tb_kelas WHERE kelas='X'")[0]['nominalspp'];
+    $sppVIII = query("SELECT nominalspp from tb_kelas WHERE kelas='XI'")[0]['nominalspp'];
+    $sppIX = query("SELECT nominalspp from tb_kelas WHERE kelas='XII'")[0]['nominalspp'];
 
     $tahunI = date("Y");
     $tahunII = date("Y", strtotime("+1 year"));

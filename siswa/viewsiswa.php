@@ -52,9 +52,10 @@ if(isset($_POST['cariSiswa'])) {
             </tr>
           </thead>
           <tbody>
+            <?php $i = 1; ?>
             <?php foreach($dataSiswa as $siswa) : ?>
               <tr>
-                <td>1</td>
+                <td><?= $i++; ?></td>
                 <td><?= $siswa['nis']; ?></td>
                 <td><?= $siswa['nama']; ?></td>
                 <td><?= $siswa['kelas']; ?></td>
